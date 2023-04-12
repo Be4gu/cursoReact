@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export function TwitterFollowCard({ children, userName, initialIsFollowing }) {
+export function TwitterFollowCard ({ children, userName, initialIsFollowing }) {
   // La prop children es una variable reservada que sirve para pillar el elemento hijo del componente
 
   const [isFollowing, setIsFollowing] = useState(initialIsFollowing)
@@ -13,23 +13,23 @@ export function TwitterFollowCard({ children, userName, initialIsFollowing }) {
   }
 
   return (
-    <article className="tw-followCard">
-      <header className="tw-followCard-header">
+    <article className='tw-followCard'>
+      <header className='tw-followCard-header'>
         <img
-          className="tw-followCard-avatar"
+          className='tw-followCard-avatar'
           src={`https://unavatar.io/${userName}`}
-          alt="avatar"
+          alt='avatar'
         />
-        <div className="tw-followCard-info">
+        <div className='tw-followCard-info'>
           <strong>{children}</strong>
-          <span className="tw-followCard-infoUserName">@{userName}</span>
+          <span className='tw-followCard-infoUserName'>@{userName}</span>
         </div>
       </header>
 
       <aside>
         <button onClick={handleClick} className={buttonClassName}>
-          <span className="tw-followCard-text">{text}</span>
-          <span className="tw-followCard-stopFollow">Dejar de seguir</span>
+          <span className='tw-followCard-text'>{text}</span>
+          <span className='tw-followCard-stopFollow'>Dejar de seguir</span>
         </button>
       </aside>
     </article>

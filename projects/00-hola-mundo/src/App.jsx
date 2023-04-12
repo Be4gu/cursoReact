@@ -6,28 +6,28 @@ const users = [
   {
     userName: 'ccrsitea34',
     name: 'Cristi',
-    isFollowing: true,
+    isFollowing: true
   },
   {
     userName: 'Ragnarok',
     name: 'Ragnar Lobruck',
-    isFollowing: true,
+    isFollowing: true
   },
   {
     userName: 'beaportomates',
     name: 'Beatriz P.',
-    isFollowing: false,
+    isFollowing: false
   },
   {
     userName: 'Rokitomate',
     name: 'Andrei C.',
-    isFollowing: false,
-  },
+    isFollowing: false
+  }
 ]
 
-export function App() {
+export function App () {
   return (
-    <section className="App">
+    <section className='App'>
       {users.map((user) => {
         const { userName, name, isFollowing } = user
         return (
@@ -35,7 +35,8 @@ export function App() {
             initialIsFollowing={isFollowing}
             userName={userName}
             name={name}
-            key={userName}>
+            key={userName}
+          >
             {name}
           </TwitterFollowCard>
         )
@@ -44,7 +45,7 @@ export function App() {
   )
 }
 
-//CON COSAS QUE TENGO QUE APUNTARME PARA QUE NO SE ME OLVIDEN
+// CON COSAS QUE TENGO QUE APUNTARME PARA QUE NO SE ME OLVIDEN
 // export function App() {
 //   // const format = (userName) => `@${userName}` //Pasar funciones como parámetro
 //   return (
